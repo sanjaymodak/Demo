@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openjdk-api-deployment
+  labels:
+    app: openjdk-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: openjdk-api
+  template:
+    metadata:
+      labels:
+        app: openjdk-api
+    spec:
+      containers:
+      - name: openjdk-api
+        image: your-registry/openjdk-api-image:v1
+        ports:
+        - containerPort: 8080 # Assuming your OpenJDK API listens on port 8080
