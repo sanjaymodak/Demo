@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: openjdk-api
-        image: docker.io/sanjaymodak/mock:latest
-        ports:
-        - containerPort: 80 # Assuming your OpenJDK API listens on port 8080
+      image: your-registry/openjdk-api-image:v1      
+      ports:
+      - containerPort: 8080 # Assuming your OpenJDK API listens on port 8080
